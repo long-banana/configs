@@ -36,6 +36,8 @@ keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- FloaTerm configuration
-keymap.set('n', "<C-f>", ":FloatermNew --height=0.95 --width=0.95 --autoclose=2 fish <CR> ")
-keymap.set('n', "t", ":FloatermShow <CR>")
+keymap.set('n', "<C-\\>", ":FloatermNew --height=0.95 --width=0.95 --autoclose=2 fish <CR> ")
+keymap.set('n', "t", ":FloatermToggle <CR>")
+keymap.set('t', "<C-\\><C-p>", "<C-\\><C-n>:FloatermPrev <CR>")
+keymap.set('t', "<C-\\><C-n>", "<C-\\><C-n>:FloatermNext <CR>")
 keymap.set('t', "<Esc>", "<C-\\><C-n>:q<CR>")
