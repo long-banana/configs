@@ -14,8 +14,11 @@ ts.setup {
     'tsx',
     'lua',
     'json',
-    'css'
+    'css',
+    'rust',
+    'toml'
   },
+  auto_install = true,
   autotag = {
     enable = true,
   }

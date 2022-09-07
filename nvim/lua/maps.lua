@@ -34,3 +34,8 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
+
+-- FloaTerm configuration
+keymap.set('n', "<C-f>", ":FloatermNew --height=0.95 --width=0.95 --autoclose=2 fish <CR> ")
+keymap.set('n', "t", ":FloatermShow <CR>")
+keymap.set('t', "<Esc>", "<C-\\><C-n>:q<CR>")

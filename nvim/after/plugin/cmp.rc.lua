@@ -19,12 +19,21 @@ cmp.setup({
     }),
   }),
   sources = cmp.config.sources({
+    { name = 'path' },
     { name = 'nvim_lsp' },
+    { name = 'nvim_lsp_signature_help' },
+    { name = 'nvim_lua', keyword_length = 2 },
+    { name = 'vsnip', keyword_length = 2 },
+    { name = 'calc' },
     { name = 'buffer' }
   }),
   formatting = {
     format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
-  }
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
 })
 
 vim.cmd [[
