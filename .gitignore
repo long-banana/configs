@@ -1,0 +1,21 @@
+# Use gitignore as an allow-list instead of a reject-list
+*
+!*/
+
+# yarn node_modules need to be specified to ignore the nested .gitignore
+yarn/global/node_modules
+
+# track this file
+!.gitignore
+
+# Fish
+!fish/**
+# Ignore fish_variables
+fish/fish_variables
+
+# Nvim
+!nvim/**
+
+# Tmux
+!tmux/**
+
