@@ -62,7 +62,6 @@ end
 
 set -x ERL_AFLAGS "-kernel shell_history enabled"
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
-ssh-add ~/.ssh/banana
 
 # tabtab source for packages
 # uninstall by removing these lines

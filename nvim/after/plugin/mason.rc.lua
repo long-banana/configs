@@ -8,4 +8,5 @@ lspconfig.setup {
   ensure_installed = { 'tailwindcss' }
 }
 
+require 'lspconfig'.rust_analyzer.setup {}
 require 'lspconfig'.tailwindcss.setup {}
