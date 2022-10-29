@@ -8,17 +8,25 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
+  --  use {
+  --    'svrana/neosolarized.nvim',
+  --    requires = { 'tjdevries/colorbuddy.nvim' }
+  --  }
+  use 'EdenEast/nightfox.nvim' -- NightFox colorschemes
+  --use 'kyazdani42/nvim-web-devicons' -- File icons
   use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    }
   }
-  use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'glepnir/lspsaga.nvim' -- LSP UIs
   use 'L3MON4D3/LuaSnip' -- Snippet
-  use {
-    'nvim-lualine/lualine.nvim', -- Statusline
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  use 'feline-nvim/feline.nvim' -- Statusline
+  --use {
+  --  'nvim-lualine/lualine.nvim', -- Statusline
+  --  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  --}
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
@@ -47,11 +55,13 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
 
-  use 'akinsho/nvim-bufferline.lua'
+  use 'vim-ctrlspace/vim-ctrlspace'
+  use 'nanozuki/tabby.nvim' -- Tab interface
+  --use 'akinsho/nvim-bufferline.lua'
   use 'norcalli/nvim-colorizer.lua'
 
-  use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim' -- For git blame & browse
+  --use 'lewis6991/gitsigns.nvim'
+  --use 'dinhhuy258/git.nvim' -- For git blame & browse
   use 'voldikss/vim-floaterm'
 
   use 'folke/zen-mode.nvim'

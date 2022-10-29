@@ -10,8 +10,12 @@ keymap.set('n', '-', '<C-x>')
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
+vim.g.CtrlSpaceDefaultMappingKey = "<C-space> "
+
 -- New tab
-keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
+keymap.set('n', 'te', ':$tabnew<CR>', { silent = true })
+keymap.set('n', 'tq', ':tabclose<CR>', { silent = true })
+--keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
@@ -34,7 +38,8 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- FloaTerm configuration
 keymap.set('n', "<C-\\>", ":FloatermNew --height=0.95 --width=0.95 --autoclose=2 fish <CR> ")
-keymap.set('n', "t", ":FloatermToggle <CR>")
+keymap.set('n', "<C-\\>t", ":FloatermToggle <CR>")
 keymap.set('t', "<C-\\><C-p>", "<C-\\><C-n>:FloatermPrev <CR>")
 keymap.set('t', "<C-\\><C-n>", "<C-\\><C-n>:FloatermNext <CR>")
-keymap.set('t', "<Esc>", "<C-\\><C-n>:q<CR>")
+keymap.set('t', "<Esc>", "<C-\\><C-n>")
+keymap.set('t', "<C-\\><Esc>", "<C-\\><C-n>:q<CR>")

@@ -63,3 +63,10 @@ end
 set -x ERL_AFLAGS "-kernel shell_history enabled"
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 ssh-add ~/.ssh/banana
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/__tabtab.fish ]; and . ~/.config/tabtab/__tabtab.fish; or true
+
+# Created by `pipx` on 2022-10-07 00:24:03
+set PATH $PATH /Users/andrew/Library/Python/3.10/bin
